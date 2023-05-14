@@ -14,7 +14,8 @@ def upload_file():
         if file:
             input_image = file.read()
 
-            os.environ["REPLICATE_API_TOKEN"] = "r8_UFtWDQqyZidQYvYyFeaifas6qb0clZx3zsAIc"
+            os.environ["REPLICATE_API_TOKEN"] = "r8_LZfmm9k12VophK1NfiV287xk8u5amry2atIYp"
+
 
             output = replicate.run(
                 "nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73abf41610695738c1d7b",
