@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style>
     body {
-        margin: 0;
-        height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: linear-gradient(270deg, #d53369, #daae51, #26191d);
-        background-size: 600% 600%;
-        animation: Gradient 6s ease infinite;
-        flex-direction: column;
-    }
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(270deg, #d53369, #daae51, #26191d);
+    background-size: 600% 600%;
+    animation: Gradient 6s ease infinite;
+    flex-direction: column;
+}
 
     @keyframes Gradient {
         0% {
@@ -79,6 +79,16 @@
             width: 90%; /* On smaller screens, the form will take 90% of the screen width */
         }
     }
+    .description-section {
+    background-color: #fff;
+    border-radius: 10px; /* If you want rounded corners */
+    font-family: 'Times New Roman', Times, serif; /* Replace with your preferred font */
+    color: #000; /* Text color */
+        margin:10px;
+        width:600px;
+        text-align: left;
+}
+
 
 </style>
 
@@ -91,27 +101,26 @@
     </nav>
     <main>
         <div class="container py-5">
-            <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
-            <div class="row">
-            <div class="col-lg-8 offset-lg-0">
-                <div class="card">
-                    <div class="card-header">Upload an Image</div>
-                    <div class="card-body">
-                        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="file" id="file" name="file" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary btn-block">
-                            </div>
-
-                        </form>
-
-                    </div>
-
+    <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-0">
+            <div class="card">
+                <div class="card-header">Upload an Image</div>
+                <div class="card-body">
+                    <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <input type="file" id="file" name="file" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary btn-block">
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
     </main>
     <!-- Loading Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="loadingModal">
