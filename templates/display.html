@@ -39,7 +39,18 @@
             width: 100%;
             height: 100%;
         }
-    </style>
+
+        .card {
+            max-width: 100%; /* Make sure card never exceeds the viewport width */
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                width: 90%; /* On small screens, make card 90% of viewport width */
+            }
+        }
+</style>
+
 </head>
 
 <body>
@@ -53,7 +64,7 @@
     <main>
     <div class="container py-5">
         <h2 class="text-center mb-4">Processed Image</h2>
-        <div class="card mx-auto" style="width: 20rem;">
+        <div class="card mx-auto text-center" style="width: 20rem; max-width: 100%;">
             <img class="card-img-top" src="data:image/png;base64,{{ img_data }}" alt="Processed image">
             <div class="card-body text-center">
                 <a href="data:image/png;base64,{{ img_data }}" download="processed_image.png" class="btn btn-primary">
