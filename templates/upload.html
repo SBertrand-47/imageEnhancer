@@ -49,26 +49,28 @@ footer {
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Image Enhancer</a>
     </nav>
-  <main>
-    <div class="container py-5">
-        <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
-        <div class="row">
-            <div class="col-lg-6 mx-auto">
-                <div class="card">
-                    <div class="card-header">Upload an Image</div>
-                    <div class="card-body">
-                        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <input type="file" id="file" name="file" class="form-control">
-                            </div>
-                            <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary">
-                        </form>
+    <main>
+        <div class="container py-5">
+            <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="card">
+                        <div class="card-header">Upload an Image</div>
+                        <div class="card-body">
+                            <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <input type="file" id="file" name="file" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary btn-block">
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-  </main>
+    </main>
     <!-- Loading Modal -->
     <div class="modal" tabindex="-1" role="dialog" id="loadingModal">
         <div class="modal-dialog" role="document">
@@ -104,7 +106,6 @@ footer {
     </script>
 
 </body>
-
 </html>
 
 
