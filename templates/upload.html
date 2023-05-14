@@ -8,41 +8,55 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(270deg, #d53369, #daae51, #26191d);
+            background-size: 600% 600%;
+            animation: Gradient 6s ease infinite;
+            flex-direction: column;
+        }
 
-    body {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(270deg, #d53369, #daae51, #26191d);
-    background-size: 600% 600%;
-    animation: Gradient 6s ease infinite;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        @keyframes Gradient {
+            0% {
+                background-position: 0% 50%
+            }
+            50% {
+                background-position: 100% 50%
+            }
+            100% {
+                background-position: 0% 50%
+            }
+        }
 
-@keyframes Gradient {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
-}
+        main {
+            flex: 1 0 auto;
+        }
 
-main {
-    flex: 1 0 auto;
-}
+        footer {
+            flex-shrink: 0;
+        }
 
-footer {
-    flex-shrink: 0;
-}
+        .navbar {
+            width: 100%;
+        }
 
-  </style>
+        #upload-form .form-group {
+            margin-bottom: 1rem;
+        }
+
+        #file {
+            width: 100%;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+        }
+
+    </style>
 </head>
 <body>
     <!-- Header -->
