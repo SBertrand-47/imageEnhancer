@@ -23,7 +23,7 @@ def upload_file():
             img.save(buffered, format="JPEG", quality=85)  # You can adjust the quality level
             compressed_image = buffered.getvalue()
 
-            os.environ["REPLICATE_API_TOKEN"] = "r8_LZfmm9k12VophK1NfiV287xk8u5amry2atIYp"
+            os.environ.get("REPLICATE_API_TOKEN")
 
             output = replicate.run(
                 "nightmareai/real-esrgan:42fed1c4974146d4d2414e2be2c5277c7fcf05fcc3a73abf41610695738c1d7b",
