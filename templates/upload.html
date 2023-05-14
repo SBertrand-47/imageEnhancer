@@ -7,56 +7,81 @@
     <title>Image Enhancer</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(270deg, #d53369, #daae51, #26191d);
-            background-size: 600% 600%;
-            animation: Gradient 6s ease infinite;
-            flex-direction: column;
-        }
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(270deg, #d53369, #daae51, #26191d);
+        background-size: 600% 600%;
+        animation: Gradient 6s ease infinite;
+        flex-direction: column;
+    }
 
-        @keyframes Gradient {
-            0% {
-                background-position: 0% 50%
-            }
-            50% {
-                background-position: 100% 50%
-            }
-            100% {
-                background-position: 0% 50%
-            }
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
         }
-
-        main {
-            flex: 1 0 auto;
+        50% {
+            background-position: 100% 50%
         }
-
-        footer {
-            flex-shrink: 0;
+        100% {
+            background-position: 0% 50%
         }
+    }
 
-        .navbar {
-            width: 100%;
+    main {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    #upload-form .form-group {
+        margin-bottom: 1rem;
+    }
+
+    #file {
+        width: 100%;
+    }
+
+    .card {
+        width: 400px; /* Adjust this to your desired width */
+        height: auto; /* It will adjust according to content, if you want a specific height, replace 'auto' */
+        margin: auto; /* To center the form */
+    }
+
+    .row {
+        margin: 0; /* Override Bootstrap's row margin */
+    }
+
+    .btn-primary {
+        background-color: #d53369;
+        border-color: #daae51;
+        color: #fff;
+        transition: all 0.5s;
+    }
+
+    .btn-primary:hover {
+        background-color: #daae51;
+        border-color: #d53369;
+    }
+
+    @media screen and (max-width: 500px) { /* This is a media query for screens smaller than 500px */
+        .card {
+            width: 90%; /* On smaller screens, the form will take 90% of the screen width */
         }
+    }
+</style>
 
-        #upload-form .form-group {
-            margin-bottom: 1rem;
-        }
 
-        #file {
-            width: 100%;
-        }
-
-        input[type="submit"] {
-            width: 100%;
-        }
-
-    </style>
 </head>
 <body>
     <!-- Header -->
@@ -67,22 +92,22 @@
         <div class="container py-5">
             <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
             <div class="row">
-                <div class="col-lg-6 mx-auto">
-                    <div class="card">
-                        <div class="card-header">Upload an Image</div>
-                        <div class="card-body">
-                            <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
-                                <div class="form-group">
-                                    <input type="file" id="file" name="file" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary btn-block">
-                                </div>
-                            </form>
-                        </div>
+            <div class="col-lg-8 offset-lg-0">
+                <div class="card">
+                    <div class="card-header">Upload an Image</div>
+                    <div class="card-body">
+                        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" id="file" name="file" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary btn-block">
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <!-- Loading Modal -->
