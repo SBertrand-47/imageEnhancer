@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Image Enhancer</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+
+    body {
+      background: repeating-linear-gradient(
+    45deg,
+    #f6f5f5,
+    #f6f5f5 10px,
+    #e6e6e6 10px,
+    #e6e6e6 20px
+  );
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    }
+    main {
+      flex: 1 0 auto;
+    }
+
+    footer {
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Image Enhancer</a>
+    </nav>
+  <main>
+    <div class="container py-5">
+        <h1 class="text-center mb-4 text-white">Image Enhancer</h1>
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card">
+                    <div class="card-header">Upload an Image</div>
+                    <div class="card-body">
+                        <form id="upload-form" action="/" method="post" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" id="file" name="file" class="form-control">
+                            </div>
+                            <input type="submit" value="Upload & Enhance Image" name="submit" class="btn btn-primary">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </main>
+    <!-- Loading Modal -->
+    <div class="modal" tabindex="-1" role="dialog" id="loadingModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Processing</h5>
+                </div>
+                <div class="modal-body">
+                    <p>Your image is being processed. This might take a few moments...</p>
+                    <div class="text-center">
+                        <div class="spinner-border" role="status">
+                            <span class="sr-only">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>&copy; 2023 Image Enhancer By Bertrand Sibomana</span>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('upload-form').onsubmit = function() {
+            $('#loadingModal').modal({backdrop: 'static', keyboard: false});
+        };
+    </script>
+
+</body>
+
+</html>
+
+
